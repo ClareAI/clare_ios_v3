@@ -7,12 +7,31 @@
 //
 
 #import "CLAppDelegate.h"
-
+#import <Clare/Clare.h>
+#import <Clare/CLSettings.h>
 @implementation CLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+    
 {
     // Override point for customization after application launch.
+    CLSettings *settings = [CLSettings initWithAppId:@"App ID"];
+    settings.host = @"App Host";
+    settings.languages = [[NSArray alloc]initWithObjects:@"zh_HK", nil];
+    settings.bubbleImage = [UIImage imageNamed:@"Icon" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection: nil];
+    settings.avatarImage = [UIImage imageNamed:@"Icon" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection: nil];
+    settings.repliesInFlowLayout = YES;
+    settings.microphoneEnable = YES;
+    //settings.voiceEnable = YES;
+    settings.loadHistory = YES;
+    settings.titles = [[NSMutableDictionary alloc]init];
+    [settings.titles setObject:@"Clare 聊天機械人" forKey:@"zh_HK"];
+    [settings.titles setObject:@"Clare Assistant" forKey:@"en_US"];
+    settings.disclaimers = [[NSMutableDictionary alloc]init];
+    [settings.disclaimers setObject:@[@"<span>• 虛擬助理是全自動化服務，因此無法回答有關您的帳戶資料的問題。<br>• 請勿在您的訊息中透露任何個人帳戶資料。<br></span>",@"<span>• 將儲存您在此提供的資料，以確保服務質素。<br>•獲授權第三方將處理及儲存資料，當中可能包括海外處理。<br>• 詳情請細閱<a href=\"https://www.clare.ai/lang=zh\" target=\"_blank\">安全與私隱。</a></span>"] forKey:@"zh_HK"];
+    [settings.disclaimers setObject:@[@"<span>• Virtual Assistant is an automated service, and therefore cannot answer questions specific to your account.<br>• Please do NOT disclose any personal account information in your messages.<br></span>",@"<span>• The information you input here will be recorded for service quality assurance.<br>• Data will be processed and stored by members of   and authorised third parties, which may include processing overseas.<br>• For the details please read the <a href=\"https://www.clare.ai\" target=\"_blank\">Security and Privacy</a> guidelines.</span>"] forKey:@"en_US"];
+    settings.languageDetection = false;
+    [[Clare sharedManager]init:settings];
     return YES;
 }
 

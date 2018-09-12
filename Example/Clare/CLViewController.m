@@ -7,6 +7,7 @@
 //
 
 #import "CLViewController.h"
+#import <Clare/Clare.h>
 
 @interface CLViewController ()
 
@@ -19,6 +20,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+    
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [[Clare sharedManager] show];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -26,4 +32,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-@end
+- (IBAction)seten:(UIButton *)sender {
+    [[Clare sharedManager]settings].languages = [[NSArray alloc]initWithObjects:@"en_US", nil];
+}
+    
+- (IBAction)setch:(UIButton *)sender {
+    [[Clare sharedManager]settings].languages = [[NSArray alloc]initWithObjects:@"zh_HK", nil];
+}
+    @end
