@@ -9,5 +9,6 @@
 @import UIKit;
 
 @interface CLViewController : UIViewController
+- (IBAction)tt:(id)sender;
 
 @end
