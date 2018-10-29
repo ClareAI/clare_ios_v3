@@ -7,12 +7,57 @@
 //
 
 #import "CLAppDelegate.h"
+#import <Clare/Clare.h>
 
 @implementation CLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    CLSettings *settings = [CLSettings initWithAppId:@"appid"];
+    settings.host = @"apphost";
+    settings.languages = [[NSArray alloc]initWithObjects:@"zh_HK",@"en_US", nil];
+    settings.avatarImage = [UIImage imageNamed:@"insurance" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection: nil];
+    settings.repliesInFlowLayout = YES;
+    settings.microphoneEnable = YES;
+    //settings.voiceEnable = YES;
+    settings.loadHistory = YES;
+    settings.titles = [[NSMutableDictionary alloc]init];
+    [settings.titles setObject:@"Clare 聊天机器人" forKey:@"zh_CN"];
+    [settings.titles setObject:@"Clare 聊天機械人" forKey:@"zh_HK"];
+    [settings.titles setObject:@"Clare Assistant" forKey:@"en_US"];
+    
+    NSMutableDictionary *properties = [[NSMutableDictionary alloc]init];
+    [properties setObject:@"HK ISLAND" forKey:@"location"];
+    [properties setObject:@"male" forKey:@"gender"];
+    settings.properties = properties;
+    settings.languageDetection = false;
+    
+    [[Clare sharedManager] init:settings withCompletion:^(BOOL ignored,BOOL success, NSError* _Nullable error) {
+        if(ignored){
+            NSLog(@"already init, not need re-init");
+        }else{
+            NSLog(@"userid sessionid %@",[[Clare sharedManager]getUserSession]);
+            if (success) {
+                NSMutableDictionary *properties = [[NSMutableDictionary alloc]init];
+                [properties setObject:@"Kowloon" forKey:@"location"];
+                [properties setObject:@"10000" forKey:@"age"];
+                [[Clare sharedManager]updateUserProperties:properties completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+                    NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
+                    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingMutableLeaves) error:nil];
+                    NSLog(@"response %@",dict);
+                    if(error){
+                        NSLog(@"update_error %@", error);
+                    }
+                }];
+            }
+            if (error) {
+                NSLog(@"init_error %@",error);
+            }
+        }
+        
+    }];
     return YES;
 }
 
