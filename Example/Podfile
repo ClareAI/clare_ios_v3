@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Clare_Example' do
+  pod 'Clare', :path => '../'
+
+  target 'Clare_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
