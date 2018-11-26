@@ -7,8 +7,9 @@
 //
 
 @import UIKit;
+#import <Clare/Clare.h>
 
-@interface CLAppDelegate : UIResponder <UIApplicationDelegate>
+@interface CLAppDelegate : UIResponder <UIApplicationDelegate,ConversationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
