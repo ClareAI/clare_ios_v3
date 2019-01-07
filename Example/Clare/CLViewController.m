@@ -2,11 +2,12 @@
 //  CLViewController.m
 //  Clare
 //
-//  Created by RajSwiftIos on 01/07/2019.
-//  Copyright (c) 2019 RajSwiftIos. All rights reserved.
+//  Created by RajSwiftIos on 12/28/2018.
+//  Copyright (c) 2018 RajSwiftIos. All rights reserved.
 //
 
 #import "CLViewController.h"
+#import <Clare/Clare.h>
 
 @interface CLViewController ()
 
@@ -20,6 +21,11 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+
+[[Clare sharedManager] show];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

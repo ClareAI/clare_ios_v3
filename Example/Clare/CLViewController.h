@@ -2,8 +2,8 @@
 //  CLViewController.h
 //  Clare
 //
-//  Created by RajSwiftIos on 01/07/2019.
-//  Copyright (c) 2019 RajSwiftIos. All rights reserved.
+//  Created by RajSwiftIos on 12/28/2018.
+//  Copyright (c) 2018 RajSwiftIos. All rights reserved.
 //
 
 @import UIKit;
