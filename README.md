@@ -22,7 +22,7 @@ pod 'Clare'
 
 ## Author
 
-Clare, hello@clare.ai
+Clare.AI, hello@clare.ai
 
 ## License
 
