@@ -21,8 +21,7 @@ pod 'Clare'
 ```
 
 ## Author
-
-RajSwiftIos, raj.hbti.2007@gmail.com
+Clare, hello@clare.ai
 
 ## License
 

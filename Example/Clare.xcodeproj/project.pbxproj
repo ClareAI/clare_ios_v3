@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		0EE9439CD868D2DA56D5B760 /* Pods-Clare_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clare_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clare_Example/Pods-Clare_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		100D2B363F32276CEC7555C7 /* Clare.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Clare.podspec; path = ../Clare.podspec; sourceTree = "<group>"; };
+		100D2B363F32276CEC7555C7 /* Clare.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Clare.podspec; path = ../Clare.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2B9CD5563C09E153FC29A625 /* Pods-Clare_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clare_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Clare_Tests/Pods-Clare_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4CCF1C38207624603606A3BA /* Pods-Clare_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clare_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Clare_Tests/Pods-Clare_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E1908EE3499EB03B8AF8C44 /* Pods-Clare_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clare_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Clare_Example/Pods-Clare_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,9 +62,9 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		743C2F0B4FAFC1853D7AAF41 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		743C2F0B4FAFC1853D7AAF41 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		96047A505FED5F080E637215 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		96047A505FED5F080E637215 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D0E209783BA1AC0376F339E0 /* Pods_Clare_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clare_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC1DD36D79DE7C8C5A25D75 /* Pods_Clare_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clare_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -208,6 +208,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				CC9D3967E6DF8DE0A1CFB5F9 /* [CP] Embed Pods Frameworks */,
+				C719347E578D0788303E50CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,6 +317,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C719347E578D0788303E50CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Clare_Example/Pods-Clare_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Clare/Clare.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Clare.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Clare_Example/Pods-Clare_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CC9D3967E6DF8DE0A1CFB5F9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,13 +348,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Clare_Example/Pods-Clare_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Clare/Clare.framework",
+				"${BUILT_PRODUCTS_DIR}/CMPopTipView/CMPopTipView.framework",
+				"${BUILT_PRODUCTS_DIR}/DGActivityIndicatorView/DGActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SCSiriWaveformView/SCSiriWaveformView.framework",
+				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Clare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CMPopTipView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSiriWaveformView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
