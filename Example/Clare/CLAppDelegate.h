@@ -2,13 +2,14 @@
 //  CLAppDelegate.h
 //  Clare
 //
-//  Created by RajSwiftIos on 01/14/2019.
-//  Copyright (c) 2019 RajSwiftIos. All rights reserved.
+//  Created by zekail on 11/26/2018.
+//  Copyright (c) 2018 zekail. All rights reserved.
 //
 
 @import UIKit;
+#import <Clare/Clare.h>
 
-@interface CLAppDelegate : UIResponder <UIApplicationDelegate>
+@interface CLAppDelegate : UIResponder <UIApplicationDelegate,ConversationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

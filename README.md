@@ -1,6 +1,6 @@
 # Clare
 
-[![CI Status](https://img.shields.io/travis/RajSwiftIos/Clare.svg?style=flat)](https://travis-ci.org/RajSwiftIos/Clare)
+[![CI Status](https://img.shields.io/travis/zekail/Clare.svg?style=flat)](https://travis-ci.org/zekail/Clare)
 [![Version](https://img.shields.io/cocoapods/v/Clare.svg?style=flat)](https://cocoapods.org/pods/Clare)
 [![License](https://img.shields.io/cocoapods/l/Clare.svg?style=flat)](https://cocoapods.org/pods/Clare)
 [![Platform](https://img.shields.io/cocoapods/p/Clare.svg?style=flat)](https://cocoapods.org/pods/Clare)
@@ -22,7 +22,7 @@ pod 'Clare'
 
 ## Author
 
-RajSwiftIos, raj.hbti.2007@gmail.com
+Clare, hello@clare.ai
 
 ## License
 

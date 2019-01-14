@@ -1,13 +1,11 @@
 use_frameworks!
 
-platform :ios, '8.0'
-
 target 'Clare_Example' do
-  pod 'Clare', :path => '../'
-
-  target 'Clare_Tests' do
-    inherit! :search_paths
-
+    pod 'Clare', :path => '../'
     
-  end
+    target 'Clare_Tests' do
+        inherit! :search_paths
+        
+        
+    end
 end
