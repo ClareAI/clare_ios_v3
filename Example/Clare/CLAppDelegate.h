@@ -1,7 +1,7 @@
 //
 //  CLAppDelegate.h
 //  Clare
-//
+//   
 //  Created by zekail on 11/26/2018.
 //  Copyright (c) 2018 zekail. All rights reserved.
 //
