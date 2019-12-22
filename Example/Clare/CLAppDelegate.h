@@ -2,14 +2,19 @@
 //  CLAppDelegate.h
 //  Clare
 //
-//  Created by 1992liumouren@gmail.com on 12/23/2019.
-//  Copyright (c) 2019 1992liumouren@gmail.com. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import <Clare/Clare.h>
 
-@interface CLAppDelegate : UIResponder <UIApplicationDelegate>
+@interface CLAppDelegate : UIResponder <UIApplicationDelegate,ConversationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (readonly, strong) NSPersistentContainer *persistentContainer;
+
+- (void)saveContext;
+
 
 @end

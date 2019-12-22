@@ -2,11 +2,9 @@
 //  CLViewController.m
 //  Clare
 //
-//  Created by 1992liumouren@gmail.com on 12/23/2019.
-//  Copyright (c) 2019 1992liumouren@gmail.com. All rights reserved.
-//
 
 #import "CLViewController.h"
+#import <Clare/Clare.h>
 
 @interface CLViewController ()
 
@@ -26,4 +24,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [[Clare sharedManager] show];
+}
 @end
