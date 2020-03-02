@@ -40,8 +40,8 @@
 		036601AD7F803F6AF9686FC3 /* Pods_Clare_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clare_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		125DB2FB94DF339BF8E3E8F3 /* Pods-Clare_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clare_Tests.release.xcconfig"; path = "Target Support Files/Pods-Clare_Tests/Pods-Clare_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		141099699B182B43D93C56AD /* Pods_Clare_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clare_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1485BD9E185E0A6BD3BE0DDA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		48CDC6FC31E2AE436B57C887 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1485BD9E185E0A6BD3BE0DDA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		48CDC6FC31E2AE436B57C887 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* Clare_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clare_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,7 +65,7 @@
 		78CB6F28CEFEAFCEF5C452E6 /* Pods-Clare_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clare_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Clare_Tests/Pods-Clare_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3D7B909CE471842991D4F3A /* Pods-Clare_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clare_Example.debug.xcconfig"; path = "Target Support Files/Pods-Clare_Example/Pods-Clare_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		CAF72522AA9DAB9A7C6ED8D6 /* Clare.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Clare.podspec; path = ../Clare.podspec; sourceTree = "<group>"; };
+		CAF72522AA9DAB9A7C6ED8D6 /* Clare.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Clare.podspec; path = ../Clare.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FD7DF6BD453A08F5C51D8FC0 /* Pods-Clare_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clare_Example.release.xcconfig"; path = "Target Support Files/Pods-Clare_Example/Pods-Clare_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +103,6 @@
 				78CB6F28CEFEAFCEF5C452E6 /* Pods-Clare_Tests.debug.xcconfig */,
 				125DB2FB94DF339BF8E3E8F3 /* Pods-Clare_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,6 +208,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				2A6054EB791643B81B213976 /* [CP] Embed Pods Frameworks */,
+				C3F75730E5FA7E1861CC7CCB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,6 +258,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -324,11 +325,19 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Clare_Example/Pods-Clare_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Clare/Clare.framework",
+				"${BUILT_PRODUCTS_DIR}/CMPopTipView/CMPopTipView.framework",
+				"${BUILT_PRODUCTS_DIR}/DGActivityIndicatorView/DGActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SCSiriWaveformView/SCSiriWaveformView.framework",
+				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Clare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CMPopTipView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSiriWaveformView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -355,6 +364,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3F75730E5FA7E1861CC7CCB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Clare_Example/Pods-Clare_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Clare/Clare.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Clare.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Clare_Example/Pods-Clare_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
