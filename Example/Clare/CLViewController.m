@@ -6,7 +6,9 @@
 //  Copyright (c) 2020 vernalclareai. All rights reserved.
 //
 
+
 #import "CLViewController.h"
+#import <Clare/Clare.h>
 
 @interface CLViewController ()
 
@@ -17,7 +19,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    [[Clare sharedManager] show];
 }
 
 - (void)didReceiveMemoryWarning
