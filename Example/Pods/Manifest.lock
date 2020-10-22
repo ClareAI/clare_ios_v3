@@ -1,0 +1,39 @@
+PODS:
+  - Clare (3.2.19):
+    - CMPopTipView
+    - DGActivityIndicatorView
+    - pop (~> 1.0)
+    - SCSiriWaveformView
+    - SocketRocket
+  - CMPopTipView (2.3.2)
+  - DGActivityIndicatorView (2.1.1)
+  - pop (1.0.12)
+  - SCSiriWaveformView (1.1.1)
+  - SocketRocket (0.5.1)
+
+DEPENDENCIES:
+  - Clare (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - CMPopTipView
+    - DGActivityIndicatorView
+    - pop
+    - SCSiriWaveformView
+    - SocketRocket
+
+EXTERNAL SOURCES:
+  Clare:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Clare: ed34d4b367fe8f96a44bd658278e32586c8f3a14
+  CMPopTipView: 2d56ef53e8e739c4e63ad97a5a88b97712b46c7b
+  DGActivityIndicatorView: ff2c76073d79692f724863c8dd38685866a03cb6
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  SCSiriWaveformView: 15b9dd6f94c7536e2032b34a35c6ff74d38c7411
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+
+PODFILE CHECKSUM: 9492a50cdba6f3399840171addf8357e6102df0c
+
+COCOAPODS: 1.10.0.rc.1
